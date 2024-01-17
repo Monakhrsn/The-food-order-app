@@ -1,12 +1,13 @@
+import AvailableMeals from './AvailableMeals';
+import MealsSummary from './MealsSummary';
+
 const Meals = () => {
-    return (
-        <ul>
-            <li>Spagetti</li>
-            <li>Pizza</li>
-            <li>Chicken salad</li>
-            <li>Showerma</li>
-        </ul>
-    )
-}
+  return (
+    <React.Fragment>
+      <MealsSummary />
+      <AvailableMeals />
+    </React.Fragment>
+  );
+};
 
 export default Meals;

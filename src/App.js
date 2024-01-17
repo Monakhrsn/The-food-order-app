@@ -1,7 +1,6 @@
-import MealsSummary from './components/Layout/MealsSummary';
+import MealsSummary from './components/Meals/MealsSummary';
 import Header from './components/Layout/Header';
-import Meals from './components/Meals/Meals';
-import Cart from './components/Cart/Cart';
+import Meals from './components/Meals/AvailableMeals';
 
 function App() {
   return (
@@ -9,7 +8,6 @@ function App() {
       <Header />
       <MealsSummary />
       <Meals />
-      {/* <Cart showOrderedList={showOrderedList} /> */}
     </>
   );
 }
