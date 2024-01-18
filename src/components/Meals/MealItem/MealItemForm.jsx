@@ -1,12 +1,18 @@
-const MealItemForm = () => {
+import classes from './MealItemForm.module.css';
+import Input from '../../UI/Input';
+
+const MealItemForm = props => {
+
+    const addAmountHandler = (e) => {
+        e.preventDefault();
+        console.log('clicked');
+        
+    }
     return (
-        <div>
-            <div>
-                <span style={{fontWeight: 'bold', marginTop:'1rem'}}>Amount</span>
-                <input type="number" style={{height:'1.5rem', marginTop: '1rem'}}/>
-            </div>
-            <button>+Add</button>
-        </div>
+        <form className={classes.form}>
+            <Input />
+            <button onClick={(e) => addAmountHandler(e)}>+Add</button>
+        </form>
     )
 }
 
