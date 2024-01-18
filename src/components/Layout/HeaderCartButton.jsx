@@ -6,7 +6,8 @@ const HeaderCartButton = props => {
     const [showOrderedList, setShowOrderedList] = useState(false);
 
     const showOrderedMealsHandler = () => {
-        setShowOrderedList(true);
+      setShowOrderedList(true);
+      console.log(showOrderedList)
     }
   return (
     <button onClick={showOrderedMealsHandler} className={classes.button}>
