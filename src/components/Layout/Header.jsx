@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Header.module.css';
 import mealsImage from '../../assets/meals.jpeg';
-import Cart from '../Cart/Cart';
 import HeaderCartButton from '../Layout/HeaderCartButton';
 
 const Header = props => {
@@ -15,7 +14,6 @@ const Header = props => {
             <div className={classes['main-image']}>
                 <img src={mealsImage} alt='Meals'/>
             </div>
-            <Cart show={props.showOrderedList} />
         </React.Fragment>
     )
 }
