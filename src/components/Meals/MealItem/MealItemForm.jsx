@@ -1,23 +1,24 @@
 import classes from './MealItemForm.module.css';
 import Input from '../../UI/Input';
 
-const MealItemForm = (props) => {
+const MealItemForm = props => {
   const addAmountHandler = (e) => {
     e.preventDefault();
     console.log('clicked');
   };
+
   return (
-    <form className={classes.form}>
-      <Input label='Amount' input={{
-        id: 'amount_' + props.id, 
-        type: 'number', 
-        min: '1', 
-        max: '5',
-        step: '1',
-        defaultValue: '1' 
-        }} />
-      <button onClick={(e) => addAmountHandler(e)}>+Add</button>
-    </form>
+      <form className={classes.form}>
+        <Input label='Amount' input={{
+          id: 'amount_' + props.id, 
+          type: 'number', 
+          min: '1', 
+          max: '5',
+          step: '1',
+          defaultValue: '1' 
+          }} />
+        <button onClick={(e) => addAmountHandler(e)}>+Add</button>
+      </form>
   );
 };
 

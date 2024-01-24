@@ -3,6 +3,7 @@ import MealsSummary from './components/Meals/MealsSummary';
 import Header from './components/Layout/Header';
 import Meals from './components/Meals/AvailableMeals';
 import Cart from './components/Cart/Cart';
+import CartProvider from './store/CartProvider';
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -16,14 +17,14 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <MealsSummary />
       <main>
         <Meals />
       </main>
-    </React.Fragment>
+    </CartProvider>
   )
 }
 
