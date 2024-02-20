@@ -10,7 +10,7 @@ const cartReducer = (state, action) => {
   if (action.type === 'ADD') {
     //using concat method to be able to return a new array
     const updatedItems = state.items.concat(action.item);
-    const updatedTotalAmount = state.totalAmount + action.iem.price * action.item.amount;
+    const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount;
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount
