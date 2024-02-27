@@ -16,8 +16,12 @@ const Cart = (props) => {
   };
 
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem({...item,amount:1});
+    cartCtx.addItem({ ...item, amount: 1 });
   };
+
+  // bind null(line 34) ensures that the id passed here to remove handler.
+  // Bind preconfigures a function for future execution and allows you to preconfigure 
+  // the argument that the function will recieve when it is excuted.
 
   const cartItems = (
     <ul className={classes['cart-items']}>
@@ -33,7 +37,7 @@ const Cart = (props) => {
       ))}
     </ul>
   );
-  
+
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
